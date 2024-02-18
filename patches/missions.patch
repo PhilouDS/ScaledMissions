@@ -1,0 +1,192 @@
+@use "builtin:missions";
+@use "builtin:string";
+@use "builtin:dictionary";
+@use 'builtin:debug';
+
+// MAIN KERBIN 01
+
+@stage "WMCC:post"
+:missions #Main_Kerbin_01 {
+    name: "ScaledMissions/Primary/PM01/Name_wmcc";
+    description: "ScaledMissions/Primary/PM01/Description_wmcc";
+}
+
+
+:missions #Main_Kerbin_01 > missionStages > _0 {
+    Objective: "ScaledMissions/Primary/PM01/Objective01";
+}
+
+
+:missions #Main_Kerbin_01 > missionStages > _0 > ConditionSet > PropertyCondition {
+    TestWatchedValue: 25000.0;
+}
+
+:missions #Main_Kerbin_01 > ContentBranches > Brief > actions > MissionCharacterDialogAction > Dialogs {
+  Entries[4]: $value:set(LocKey, "ScaledMissions/Primary/PM01/Brief05");
+}
+
+// MAIN KERBIN 02
+
+@stage "WMCC:post"
+:missions #Main_Kerbin_02 {
+    name: "ScaledMissions/Primary/rocketSpace/Name_wmcc";
+    description: "ScaledMissions/Primary/rocketSpace/Description_wmcc";
+}
+
+:missions #Main_Kerbin_02 > missionStages > _0 {
+    Objective: "ScaledMissions/Primary/PM01/Objective02";
+}
+
+:missions #Main_Kerbin_02 > missionStages > _0 > ConditionSet > PropertyCondition {
+    TestWatchedValue: 86000.0;
+}
+
+:missions #Main_Kerbin_02 > ContentBranches > Brief > actions > MissionCharacterDialogAction > Dialogs {
+  Entries[4]: $value:set(LocKey, "ScaledMissions/Primary/PM02/Brief05");
+}
+
+// WMCC -> Sounding Rocket High
+
+@stage "WMCC:post"
+:missions #sounding_rocket_high {
+    name: "ScaledMissions/sounding_rocket_high_wmcc/Name";
+    description: "ScaledMissions/sounding_rocket_high_wmcc/Description";
+}
+
+@stage "WMCC:post"
+:missions #sounding_rocket_high > missionStages > _0 {
+    Objective: "ScaledMissions/sounding_rocket_high_wmcc/Objective";
+}
+
+@stage "WMCC:post"
+:missions #sounding_rocket_high > missionStages > _0 > ConditionSet > PropertyCondition {
+    TestWatchedValue: 1250000.0;
+}
+
+
+// MAIN KERBIN 03
+
+:missions #Main_Kerbin_03 > missionStages > _0 {
+    Objective: "ScaledMissions/Primary/PM01/Objective03";
+}
+
+:missions #Main_Kerbin_03 > missionStages > _0 > ConditionSet > PropertyCondition {
+    @if $$PropertyTypeAQN:contains('Periapsis') {
+        TestWatchedValue: 86000.0;
+    } @else-if $$PropertyTypeAQN:contains('Apoapsis') {
+        TestWatchedValue: 400000.0;
+    }
+}
+
+:missions #Main_Kerbin_03 > ContentBranches > Brief > actions > MissionCharacterDialogAction > Dialogs {
+  Entries[4]: $value:set(LocKey, "ScaledMissions/Primary/PM03/Brief05");
+}
+
+
+// MAIN MUN OR BUST 04
+
+:missions #Main_MunOrBust_04 > missionStages > _16 {
+    Objective: "ScaledMissions/Primary/PM01/Objective04";
+}
+
+:missions #Main_MunOrBust_04 > missionStages > _16 > ConditionSet > PropertyCondition {
+    @if $$PropertyTypeAQN:contains('Periapsis') {
+        TestWatchedValue: 150000.0;
+    } @else-if $$PropertyTypeAQN:contains('Apoapsis') {
+        TestWatchedValue: 5573000.0;
+    }
+}
+
+// MAIN DUNA 01
+
+:missions #Main_Duna_01 > ContentBranches > Brief > actions > MissionCharacterDialogAction > Dialogs {
+  Entries[6]: $value:set(LocKey, "ScaledMissions/Primary/PM09/Brief07");
+}
+
+// MAIN JOOL 01
+
+:missions #Main_Jool_BetterSignal > missionStages > _16 {
+    Objective: "ScaledMissions/Primary/PM01/Objective10";
+}
+
+:missions #Main_Jool_BetterSignal > ContentBranches > Brief > actions > MissionCharacterDialogAction > Dialogs {
+  Entries[3]: $value:set(LocKey, "ScaledMissions/Primary/PM10/Brief04");
+}
+
+// SECONDARY KERBIN ORBIT CIRCULAR
+
+:missions #KSP2Mission_Secondary_Kerbin_OrbitCircular > missionStages > _0 {
+    Objective: "ScaledMissions/Secondary/Kerbin_OrbitCircular/Objective";
+}
+
+:missions #KSP2Mission_Secondary_Kerbin_OrbitCircular > missionStages > _0 > ConditionSet > PropertyCondition {
+    @if $$PropertyTypeAQN:contains('Periapsis') and $$propOperator:contains('LESSER') {
+        TestWatchedValue: 252500.0;
+    }
+    @else-if $$PropertyTypeAQN:contains('Periapsis') and $$propOperator:contains('GREATER') {
+        TestWatchedValue: 247500.0;
+    }
+    @else-if $$PropertyTypeAQN:contains('Apoapsis') and $$propOperator:contains('LESSER') {
+        TestWatchedValue: 252500.0;
+    }
+    @else-if $$PropertyTypeAQN:contains('Apoapsis') and $$propOperator:contains('GREATER') {
+        TestWatchedValue: 247500.0;
+    }
+}
+
+
+// SECONDARY KERBIN ORBIT ECCENTRIC
+
+:missions #KSP2Mission_Secondary_Kerbin_OrbitEccentric > missionStages > _0 {
+    Objective: "ScaledMissions/Secondary/Kerbin_OrbitEccentric/Objective";
+}
+
+:missions #KSP2Mission_Secondary_Kerbin_OrbitEccentric > missionStages > _0 > ConditionSet > PropertyCondition {
+    @if $$PropertyTypeAQN:contains('Periapsis') and $$propOperator:contains('LESSER') {
+        TestWatchedValue: 375000.0;
+    }
+    @else-if $$PropertyTypeAQN:contains('Periapsis') and $$propOperator:contains('GREATER') {
+        TestWatchedValue: 175000.0;
+    }
+    @else-if $$PropertyTypeAQN:contains('Apoapsis') and $$propOperator:contains('LESSER') {
+        TestWatchedValue: 21000000.0;
+    }
+    @else-if $$PropertyTypeAQN:contains('Apoapsis') and $$propOperator:contains('GREATER') {
+        TestWatchedValue: 750000.0;
+    }
+}
+
+// SECONDARY KERBIN ORBIT KEOSTATIONARY
+
+:missions #KSP2Mission_Secondary_Kerbin_OrbitKeostationary > missionStages > _0 {
+    Objective: "ScaledMissions/Secondary/Kerbin_OrbitKeostationary/Objective";
+}
+
+:missions #KSP2Mission_Secondary_Kerbin_OrbitKeostationary > missionStages > _0 > ConditionSet > ConditionSet > PropertyCondition {
+    @if $$PropertyTypeAQN:contains('Orbit') and $$propOperator:contains('GREATER') {
+        TestWatchedValue: 1841.0;
+    } @else-if $$PropertyTypeAQN:contains('Orbit') and $$propOperator:contains('LESSER') {
+        TestWatchedValue: 1879.0;
+    } 
+    
+    @if $$PropertyTypeAQN:contains('Periapsis') and $$propOperator:contains('GREATER') {
+        TestWatchedValue: 4830.0;
+    } @else-if $$PropertyTypeAQN:contains('Periapsis') and $$propOperator:contains('LESSER') {
+        TestWatchedValue: 4927.0;
+    }
+    
+    @if $$PropertyTypeAQN:contains('Apoapsis') and $$propOperator:contains('GREATER') {
+        TestWatchedValue: 4830.0;
+    } @else-if $$PropertyTypeAQN:contains('Apoapsis') and $$propOperator:contains('LESSER') {
+        TestWatchedValue: 4927.0;
+    }
+}
+
+
+@stage "ScaledMissions:post"
+:missions #KSP2Mission_Secondary_Kerbin_OrbitKeostationary > missionStages > _0 > ConditionSet > ConditionSet > PropertyCondition {
+  $log: debug-log("Found condition");
+  $log: debug-log("Property type: " + $$PropertyTypeAQN);
+  $log: debug-log("Property operator: " + $$propOperator);
+  $log: debug-log("Value: " + serialize($$TestWatchedValue));
+}

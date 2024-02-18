@@ -1,0 +1,37 @@
+{
+  "spec": "2.0",
+  "mod_id": "ScaledMissions",
+  "author": "PhilippeDS and Cheese",
+  "name": "Scaled Missions (2.5x)",
+  "description": "Changes the altitude value of stock missions to play with the mod 2.5x Kerbolar System",
+  "source": "https://github.com/philouds",
+  "version": "0.2.1",
+  "ksp2_version": {
+      "min": "0.1.5",
+      "max": "*"
+  },
+  "dependencies": [
+    {
+      "id": "com.github.x606.spacewarp",
+      "version": {
+          "min": "1.7.0",
+          "max": "*"
+      }
+    },
+    {
+      "id": "PatchManager",
+      "version": {
+          "min": "0.5.0",
+          "max": "*"
+      }
+    },
+    {
+      "id": "KerbolarUpscale",
+      "version": {
+          "min": "0.3.0",
+          "max": "*"
+      }
+    }
+  ]
+}
+

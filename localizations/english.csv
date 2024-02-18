@@ -1,0 +1,53 @@
+Key,Type,Desc,English
+ScaledMissions/Primary/PM01/Objective01,Text,,Launch a rocket from Kerbin and achive an altitude of at least 25 km.
+ScaledMissions/Primary/PM01/Brief05,Text,,"Now that we have a Director, it’s time to build and launch our program’s inaugural vessel! 
+For our first mission, <style="TXT-Objective">your objective is to launch a rocket from <style="OBJ-Kerbin">Kerbin</style> and achieve an altitude of 25,000 meters.</style> 
+It's hard to have a space program without launching a rocket!"
+
+ScaledMissions/Primary/PM01/Name_wmcc,Text,,Sounding Rocket (25 km)
+ScaledMissions/Primary/PM01/Description_wmcc,Text,,"Time to launch the Kerbal Space Program’s inaugural vessel, a fully functional rocket!"
+
+ScaledMissions/Primary/PM01/Objective02,Text,,Launch a rocket from Kerbin and achieve an altitude greater than 86km.
+ScaledMissions/Primary/PM02/Brief05,Text,,"Well, we accept their challenge! The perfect mission objective! 
+<style="TXT-Objective">Your objective is to launch a rocket from <style="OBJ-Kerbin">Kerbin</style> and fly higher than 175,000 meters.</style>"
+
+
+ScaledMissions/Primary/rocketSpace/Name_wmcc,Text,,Sounding Rocket (86 km)
+ScaledMissions/Primary/rocketSpace/Description_wmcc,Text,,"Someone left an anonymous note that our launch wasn’t a success. Let’s make it undeniable!"
+
+
+ScaledMissions/Primary/PM01/Objective03,Text,,Establish an orbit around Kerbin with an Apoapsis less than 400km and a Periapsis greater than 86km.
+ScaledMissions/Primary/PM03/Brief05,Text,,"<style="TXT-Objective">Your objective is to establish an orbit around Kerbin with an AP (Apoapsis) less than 400km, and a PE (Periapsis) greater than 86km.</style> 
+The sweet spot is where your orbit doesn’t leave Kerbin, but also doesn’t dip into Kerbin’s atmosphere."
+
+
+ScaledMissions/Primary/PM01/Objective04,Text,,Establish an orbit around the Mun with an Apoapsis less than 5573km and a Periapsis greater than 150km.
+
+
+
+ScaledMissions/sounding_rocket_high_wmcc/Name,Text,,Sounding Rocket (1250 km)
+ScaledMissions/sounding_rocket_high_wmcc/Description,Text,,Launch a sounding rocket to 1250 km.
+ScaledMissions/sounding_rocket_high_wmcc/Objective,Text,,Launch a sounding rocket to at least 1250 km altitude.
+
+
+ScaledMissions/Primary/PM09/Brief07,Text,,"The middle stage of your rocket must be able to get from <style="OBJ-Kerbin">Kerbin</style> to <style="OBJ-Duna">Duna</style>, and then decelerate to achieve <style="OBJ-Duna">Duna</style> orbit.  
+If you fly within <color=#FFA114><b><cspace=-.1em>125km</cspace></b></color> of Duna's surface, you'll be in its thin atmosphere.
+Dipping into that atmosphere will slow down your vessel, allowing you to save fuel. This is called "aerobraking." But be careful - as you've learned on <style="OBJ-Kerbin">Kerbin</style>, atmospheric entry creates heat, so you'll want to pack some heat protection!"
+
+
+
+ScaledMissions/Primary/PM01/Objective10,Text,,Set up a vessel with a probe core and an antenna with a minimum range of 215 Gm around Jool.
+ScaledMissions/Primary/PM10/Brief04,Text,,"Well, if it’s up to me, you never will lose contact! 
+<style="TXT-Objective">Your objective is to send a vessel with a probe core and an antenna with a minimum range of 215 Gm to orbit the planet <style="OBJ-Jool">Jool</style>.</style> 
+I’ve heard the engineers say that part selection is a sacred process and that you should let the antenna choose you. If you aren’t sure where to start, I suggest being <i>chosen</i> by an <style="TXT-Bold">RA-15</style> or a <style="TXT-Bold">Communotron HG-55</style>. 
+You've already flown a similar mission around <style="OBJ-Kerbin">Kerbin</style>, so you should be a pro. If this was a test you’d probably get a <i>prograde</i>. Heh!"
+
+
+ScaledMissions/Secondary/Kerbin_OrbitCircular/Objective,Text,,"Establish an orbit around Kerbin with an AP and PE each between 247.5km and 252.5km."
+
+
+ScaledMissions/Secondary/Kerbin_OrbitEccentric/Objective,Text,,"Orbit Kerbin with a PE of 175-375km and an AP of 750km-21,000km."
+
+ScaledMissions/Secondary/Kerbin_OrbitKeostationary/Objective,Text,,"Using a vehicle with a probe core, orbit Kerbin at an altitude of 4879km and an orbital speed of 1860m/s."
+
+
