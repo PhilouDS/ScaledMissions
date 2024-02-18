@@ -181,12 +181,3 @@
         TestWatchedValue: 4927.0;
     }
 }
-
-
-@stage "ScaledMissions:post"
-:missions #KSP2Mission_Secondary_Kerbin_OrbitKeostationary > missionStages > _0 > ConditionSet > ConditionSet > PropertyCondition {
-  $log: debug-log("Found condition");
-  $log: debug-log("Property type: " + $$PropertyTypeAQN);
-  $log: debug-log("Property operator: " + $$propOperator);
-  $log: debug-log("Value: " + serialize($$TestWatchedValue));
-}
