@@ -170,14 +170,14 @@
     } 
     
     @if $$PropertyTypeAQN:contains('Periapsis') and $$propOperator:contains('GREATER') {
-        TestWatchedValue: 4830.0;
+        TestWatchedValue: 4830000.0;
     } @else-if $$PropertyTypeAQN:contains('Periapsis') and $$propOperator:contains('LESSER') {
-        TestWatchedValue: 4927.0;
+        TestWatchedValue: 4927000.0;
     }
     
     @if $$PropertyTypeAQN:contains('Apoapsis') and $$propOperator:contains('GREATER') {
-        TestWatchedValue: 4830.0;
+        TestWatchedValue: 4830000.0;
     } @else-if $$PropertyTypeAQN:contains('Apoapsis') and $$propOperator:contains('LESSER') {
-        TestWatchedValue: 4927.0;
+        TestWatchedValue: 4927000.0;
     }
 }
