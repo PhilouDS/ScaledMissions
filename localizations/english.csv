@@ -9,7 +9,7 @@ ScaledMissions/Primary/PM01/Description_wmcc,Text,,"Time to launch the Kerbal Sp
 
 ScaledMissions/Primary/PM01/Objective02,Text,,Launch a rocket from Kerbin and achieve an altitude greater than 86km.
 ScaledMissions/Primary/PM02/Brief05,Text,,"Well, we accept their challenge! The perfect mission objective! 
-<style="TXT-Objective">Your objective is to launch a rocket from <style="OBJ-Kerbin">Kerbin</style> and fly higher than 175,000 meters.</style>"
+<style="TXT-Objective">Your objective is to launch a rocket from <style="OBJ-Kerbin">Kerbin</style> and fly higher than 86,000 meters.</style>"
 
 
 ScaledMissions/Primary/rocketSpace/Name_wmcc,Text,,Sounding Rocket (86 km)
